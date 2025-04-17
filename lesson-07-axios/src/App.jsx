@@ -19,10 +19,22 @@ function App() {
     console.log(response.data)
   }
 
-  //this code runs only once when the page loads because we added [] (empty dependency)
+  const createUser = async (newUser) => {//we wait with await because it works async
+    const response = await axios.post(`${BASE_URL}/users`, newUser);//we use the "post" to add data
+    console.log("response", response.data)
+  }
+
+  //this code runs only once when the page loads because we added "[]" (empty dependency)
   useEffect(() => {
     getAllUsers();//retrieves all users
     getUserById(1);//retrieves the user with ID "1" 
+
+    const newUser = {
+      "username" : "Fatma",
+      "password" : "8798"
+    }//we created a new user, but we did not add id because local server will assign automatically
+
+    createUser(newUser);
   }, [])
 
   return (
