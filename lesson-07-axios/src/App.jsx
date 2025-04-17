@@ -24,17 +24,27 @@ function App() {
     console.log("response", response.data)
   }
 
+  const updateUser = async (userId, updatedUser) => {
+    await axios.put(`${BASE_URL}/users/${userId}`, updatedUser);//we use "put" to update a data
+  }
+
   //this code runs only once when the page loads because we added "[]" (empty dependency)
   useEffect(() => {
-    getAllUsers();//retrieves all users
-    getUserById(1);//retrieves the user with ID "1" 
+    // getAllUsers();//retrieves all users
+    // getUserById(1);//retrieves the user with ID "1" 
 
-    const newUser = {
-      "username" : "Fatma",
-      "password" : "8798"
-    }//we created a new user, but we did not add id because local server will assign automatically
+    // const newUser = {
+    //   "username" : "Fatma",
+    //   "password" : "8798"
+    // }//we created a new user, but we did not add id because local server will assign automatically
 
     createUser(newUser);
+
+    //we defined new values by assigning parameters
+    updateUser("2", {
+      "username" : "cenk",
+      "password" : "7890"
+    })
   }, [])
 
   return (
