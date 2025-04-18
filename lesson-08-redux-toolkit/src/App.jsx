@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import { useSelector, useDispatch } from "react-redux";
-import { decrement, increment } from "./redux/counterSlice"; //we imported decrement and increment functions from counterSlice.jxs
+import { decrement, increment } from "./redux/counterSlice"; //we imported decrement and increment functions from
+import UserList from "./userList";
 
 function App() {
   const dispatch = useDispatch();
@@ -11,13 +12,16 @@ function App() {
 
   return (
     <>
+    {/* <div>
+      <div>{counter.value}</div>
       <div>
-        <div>{counter.value}</div>
-        <div>
-          <button onClick={() => dispatch(increment())}>increase</button> {/**we called increment function from the counterSlice reducers using dispatch */}
-          <button onClick={() => dispatch(decrement())}>decrease</button>{/**we called decrement function from counterSlice reducers using dispatch */}
-        </div>
-      </div>
+        <button onClick={() => dispatch(increment())}>increase</button> {/**we called increment function from the counterSlice reducers using dispatch */}
+        {/* <button onClick={() => dispatch(decrement())}>decrease</button>*we called decrement function from counterSlice reducers using dispatch */}
+      {/* </div>
+    </div> */}
+
+
+    <div> <UserList /></div>
     </>
   );
 }
