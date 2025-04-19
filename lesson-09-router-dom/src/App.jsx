@@ -1,33 +1,25 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import {Routes, Route} from 'react-router-dom'//we import our routes and route to use below
+import Home from './pages/Home'
+import About from './pages/About'
+import Products from './pages/Products'
+import Contact from './pages/Contact'
+import PageNotFound from './pages/PageNotFound'
+import Header from './components/header'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <Header/>{/**we called our header and imported it above*/}
+    <Routes> {/**we opend routes here to put "route"s inside this (so we can renderour pages (components)) and we should import them above*/}
+      <Route path='/' element={<Home/>} />
+      <Route path='/about' element={<About/>} />
+      <Route path='/products' element={<Products/>} />
+      <Route path='/contact' element={<Contact/>} />
+      <Route path='/*' element={<PageNotFound/>} /> {/**if user write invalid path to the end of the URL this component will run */}
+    </Routes> {/**when our URL address matches with a path from here, it takes us to the component of that path */}
     </>
   )
 }
