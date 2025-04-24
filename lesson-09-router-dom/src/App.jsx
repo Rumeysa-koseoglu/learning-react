@@ -9,6 +9,7 @@ import PageNotFound from "./pages/PageNotFound";
 import Header from "./components/header";
 import AboutEmployees from "./pages/AboutEmployees";
 import AboutCompany from "./pages/AboutCompany";//we need to import two child route elements here 
+import ProductDetails from "./pages/ProductDetails";
 
 function App() {
 
@@ -26,10 +27,12 @@ function App() {
         </Route>
 
         <Route path="/products" element={<Products />} />
+        <Route path="/product-details/:id" element={<ProductDetails />} />
+
         <Route path="/contact" element={<Contact />} />
-        <Route path="/*" element={<PageNotFound />} />{" "}
+        <Route path="/*" element={<PageNotFound />} />
         {/**if user write invalid path to the end of the URL this component will run */}
-      </Routes>{" "}
+      </Routes>
       {/**when our URL address matches with a path from here, it takes us to the component of that path */}
     </>
   );
