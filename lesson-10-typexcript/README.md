@@ -19,7 +19,7 @@ in this vay the firstName variable cannot be assigned any value other than a str
 /------------------------------------------------------
 
 2-'Any' usage
-for example, we send a request to get tge  information of a user whose id is 5, but we dont know which type of age of the users age will come , then we use "any"
+for example, we send a request to get the  information of a user whose id is 5, but we dont know which type of age of the users age will come , then we use "any"
 
 e.g let userAge :any =      ---it doesn't matter what type of value will come to this field
 
@@ -75,7 +75,7 @@ we cannot do this when we use our own created type;
  it is unacceptable because that is not the type we created
   
 it is the best way to use it in the array;
- const array :User [{name: "Ayse", age: 34}] 
+ const array :User[] = [{name: "Ayse", age: 34}] 
 
 and we can create our custom type using "interface"
 
