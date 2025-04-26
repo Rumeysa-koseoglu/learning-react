@@ -65,3 +65,8 @@ input[type=number] {
   align-items: flex-start;
   justify-content: flex-start;
 }
+
+.imput-error {
+  font-size: 14px;
+  color: rgb(219, 98, 98);
+}
