@@ -25,7 +25,7 @@ function MUIButton() {
         <Button size="large" variant="contained" color="secondary">Save</Button>
     </div>
 
-    <div>
+    <div style={{marginBottom: "50px"}} >
         <Button size="medium" variant="contained" color="success" startIcon={<AddCircleIcon/>} style={{marginRight: "10px"}}>Save</Button>
         <Button size="medium" variant="contained" color="success" endIcon={<AddCircleIcon/>} style={{marginRight: "10px"}}>Save</Button>
     </div>
