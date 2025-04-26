@@ -3,7 +3,7 @@ import  TextField  from '@mui/material/TextField'
 import InputAdornment from '@mui/material/InputAdornment';
 import PersonIcon from '@mui/icons-material/Person';
 
-function MIUTextField() {
+function MUITextField() {
   return (
     <>
     <div style={{marginBottom: "50px"}} >
@@ -45,4 +45,4 @@ function MIUTextField() {
   )
 }
 
-export default MIUTextField
+export default MUITextField
