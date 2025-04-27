@@ -20,7 +20,7 @@ function MUISelect() {
       </FormControl>
       {/** we can do the same thing with textfield; */}
 
-      <TextField value={currency} onChange={(e) => setCurrency(e.target.value)} sx={{width: '150px'}} label="currency" select>
+      <TextField value={currency} onChange={(e) => setCurrency(e.target.value)} sx={{width: '150px', marginBottom: '40px'}} label="currency" select>
         <MenuItem value="TRY">Turkish Lira</MenuItem>
         <MenuItem value="USD">US Dollar</MenuItem>
         <MenuItem value="EUR">Euro</MenuItem>
