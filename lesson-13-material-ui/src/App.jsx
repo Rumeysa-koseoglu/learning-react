@@ -11,6 +11,7 @@ import MUIGrid from './components/MUIGrid'
 import MUICard from './components/MUICard'
 import MUIAccordion from './components/MUIAccordion'
 import MUIAppBar from './components/MUIAppBar'
+import MUIImageList from './components/MUIImageList'
 
 function App() {
 
@@ -37,6 +38,8 @@ function App() {
     <MUIAccordion/>
 
     <MUIAppBar/>
+
+    <MUIImageList/>
     </>
   )
 }
