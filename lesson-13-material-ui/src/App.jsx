@@ -8,6 +8,7 @@ import MUIAutoComplete from './components/MUIAutoComplete'
 import MUIBox from './components/MUIBox'
 import MUIStack from './components/MUIStack'
 import MUIGrid from './components/MUIGrid'
+import MUICard from './components/MUICard'
 
 function App() {
 
@@ -28,6 +29,8 @@ function App() {
     <MUIStack/>
 
     <MUIGrid/>
+
+    <MUICard/>
     </>
   )
 }
