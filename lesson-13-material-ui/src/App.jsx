@@ -13,6 +13,7 @@ import MUIAccordion from './components/MUIAccordion'
 import MUIAppBar from './components/MUIAppBar'
 import MUIImageList from './components/MUIImageList'
 import MUIDrawer from './components/MUIDrawer'
+import MUIBadge from './components/MUIBadge'
 
 function App() {
 
@@ -43,6 +44,8 @@ function App() {
     <MUIImageList/>
 
     <MUIDrawer/>
+
+    <MUIBadge/>
     </>
   )
 }
