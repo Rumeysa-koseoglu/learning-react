@@ -15,6 +15,7 @@ import MUIImageList from "./components/MUIImageList";
 import MUIDrawer from "./components/MUIDrawer";
 import MUIBadge from "./components/MUIBadge";
 import MUIAvatar from "./components/MUIAvatar";
+import MUITooltip from "./components/MUITooltip";
 
 function App() {
   return (
@@ -48,6 +49,8 @@ function App() {
       <MUIBadge />
 
       <MUIAvatar />
+
+      <MUITooltip />
     </>
   );
 }
