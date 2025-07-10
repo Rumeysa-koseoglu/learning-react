@@ -1,0 +1,23 @@
+.navbar {
+  width: 100%;
+  height: 70px;
+  background-color: purple;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.navbar-left {
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.navbar-right {
+  cursor: pointer;
+  font-weight: 200;
+  font-size: 14px;
+  margin-right: 20px;
+}
