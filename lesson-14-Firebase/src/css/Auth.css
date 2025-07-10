@@ -21,7 +21,7 @@
 input {
   border: 1px solid lightgray;
   padding: 8px;
-  width: 300px;
+  width: 350px;
   border-radius: 5px;
 }
 
@@ -47,6 +47,17 @@ input {
   border: none;
   border-radius: 5px;
   background-color: rgb(49, 180, 51);
+  color: white;
+  cursor: pointer;
+}
+
+.google-button {
+  display: flex;
+  align-items: center;
+  padding: 5px 15px 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(142, 30, 36);
   color: white;
   margin-right: 10px;
   cursor: pointer;

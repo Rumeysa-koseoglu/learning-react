@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/Auth.css";
+import { FaGoogle } from "react-icons/fa";
 
 function Auth() {
   return (
@@ -10,6 +11,9 @@ function Auth() {
         <input type="password" placeholder="password" />
       </div>
       <div className="buttons-wrapper" style={{ marginTop: "20px" }}>
+        <button className="google-button">
+          <FaGoogle style={{ marginRight: "10px" }} /> Sign in with Google
+        </button>
         <button className="login-button">Log in</button>
         <button className="register-button">Sign up</button>
       </div>
