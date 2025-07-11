@@ -2,13 +2,30 @@ import React from "react";
 import "../css/Auth.css";
 import { FaGoogle } from "react-icons/fa";
 import { useState } from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 import { toast } from "react-toastify";
 import { auth } from "./Firebase";
+import { useNavigate } from "react-router-dom";
 
 function Auth() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const login = async () => {
+    try {
+      const response = await signInWithEmailAndPassword(auth, email, password);
+      const user = response.user;
+      if (user) {
+        navigate("/");
+      }
+    } catch (error) {
+      toast.error("Login failed: " + error.message);
+    }
+  };
 
   const register = async () => {
     try {
@@ -49,7 +66,9 @@ function Auth() {
         <button className="google-button">
           <FaGoogle style={{ marginRight: "10px" }} /> Sign in with Google
         </button>
-        <button className="login-button">Log in</button>
+        <button onClick={login} className="login-button">
+          Log in
+        </button>
         <button onClick={register} className="register-button">
           Sign up
         </button>
