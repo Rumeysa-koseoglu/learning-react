@@ -5,15 +5,33 @@ import { useState } from "react";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
 } from "firebase/auth";
 import { toast } from "react-toastify";
 import { auth } from "./Firebase";
 import { useNavigate } from "react-router-dom";
 
+const provider = new GoogleAuthProvider();
+
 function Auth() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
+  const loginWithGoogle = async () => {
+    try {
+      const response = await signInWithPopup(auth, provider);
+
+      const user = response.user;
+
+      if (user) {
+        navigate("/");
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
 
   const login = async () => {
     try {
@@ -63,7 +81,7 @@ function Auth() {
         />
       </div>
       <div className="buttons-wrapper" style={{ marginTop: "20px" }}>
-        <button className="google-button">
+        <button className="google-button" onClick={loginWithGoogle}>
           <FaGoogle style={{ marginRight: "10px" }} /> Sign in with Google
         </button>
         <button onClick={login} className="login-button">
