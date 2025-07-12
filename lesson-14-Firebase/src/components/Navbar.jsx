@@ -9,11 +9,9 @@ function Navbar() {
   const navigate = useNavigate();
 
   const logOut = async () => {
-    toast.success("logging out");
-    setTimeout(() => {
-      signOut(auth);
-      navigate("/auth");
-    }, 3000);
+    await signOut(auth);
+    toast.success("logged out");
+    navigate("/auth");
   };
 
   return (
